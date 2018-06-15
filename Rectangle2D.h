@@ -22,6 +22,7 @@ private:
 	};
 public:
 	double getX() {
+		//PT -- don't do cout statements in these get functions. Just return the value.
 		cout << "X = ";
 		return x;
 		cout << endl;
@@ -96,6 +97,8 @@ public:
 		cout << endl;
 	};
 	bool overlaps(const Rectangle2D &r) {
+		//PT -- Oops. Let's get the code written.
+		//  -3
 		cout << "This function has no code written for it. I apologise.";
 	}
 	Rectangle2D(double a, double b, double c, double d);
