@@ -26,10 +26,14 @@ string Course::getCourseName() const
 
 void Course::addStudent(const string& name)
 {
+	//PT -- need to make sure you have enough room for the new student.
+	//      if you don't, you need to increase the capacity of students[]
+	//  -2
 	students[numberOfStudents] = name;
 	numberOfStudents++;
 }
 
+//PT -- you don't need size here. You have numberOfStudents
 void Course::dropStudent(const string& name, int size)
 {
 	for (int j = 0; j < size; j++)
@@ -43,6 +47,8 @@ void Course::dropStudent(const string& name, int size)
 
 void Course::clear()
 {
+	//PT -- numberOfStudents = 0;
+	//      capacity = 1;
 	delete[] students;
 	students = new string[1];
 }
